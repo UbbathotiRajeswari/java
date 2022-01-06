@@ -1,0 +1,27 @@
+Interface jetplane
+{
+abstract int numengines();
+}
+class DC8 implements jetplane
+{
+public int numengines()
+{
+return 3;
+}
+}
+class DC10 implements jetplane
+{
+public int numengines()
+}
+{
+return 4;
+}
+}
+public class Interfacejetplane
+{
+public static void main(string[] args)
+{
+System.out.println("enter number of DC8 engines",newDC8.numengines());
+System.out.println("enter number of DC10 engines",newDC10.numengines());
+}
+}                            
