@@ -1,0 +1,57 @@
+import java.util.Scanner;
+class student
+{
+int id;
+String n;
+Scanner s=new Scanner(System.in);
+void readinfo()
+{
+
+System.out.println("enter name");
+n=s.nextLine();
+System.out.println("enter id");
+id=s.nextInt();
+}
+}
+class test extends student
+{
+int m[]=new int[6];
+void sal()
+{
+for(int i=0;i<6;i++)
+{
+System.out.println("enter marks of "+(i+1)+"th subject");
+m[i]=s.nextInt();
+}
+}
+}
+class result extends test
+{
+int sum=0;
+void res()
+{
+for(int i:m)
+{
+sum=sum+i;
+}
+}
+void displayemp()
+{
+System.out.println("total marks of "+n+" is "+sum);
+}
+}
+class week4_ii
+{
+public static void main(String arg[])
+{
+result e[]=new result[2];
+for(int i=0;i<2;i++)
+{
+e[i]=new result();
+e[i].readinfo();
+e[i].sal();
+e[i].res();
+e[i].displayemp();
+}
+}
+}
