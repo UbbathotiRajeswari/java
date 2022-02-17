@@ -1,0 +1,56 @@
+import java.util.Scanner;
+class employee
+{
+int id;
+String n,d;
+Scanner s=new Scanner(System.in);
+void reademp()
+{
+
+System.out.println("enter name");
+n=s.nextLine();
+System.out.println("enter designation");
+d=s.nextLine();
+System.out.println("enter id");
+id=s.nextInt();
+}
+}
+class salary extends employee
+{
+int bp,hra,np,da,pf;
+void sal()
+{
+
+System.out.println("enter basic pay");
+bp=s.nextInt();
+System.out.println("enter HRA");
+hra=s.nextInt();
+System.out.println("enter DA");
+da=s.nextInt();
+System.out.println("enter PF");
+pf=s.nextInt();
+}
+void calc_sal()
+{
+np=bp+hra+da-pf;
+}
+void displayemp()
+{
+System.out.println("net pay amount of"+n+"is"+np);
+}
+}
+class week4_i
+{
+public static void main(String arg[])
+{
+salary e[]=new salary[2];
+for(int i=0;i<2;i++)
+{
+e[i]=new salary();
+e[i].reademp();
+e[i].sal();
+e[i].calc_sal();
+e[i].displayemp();
+}
+}
+}
