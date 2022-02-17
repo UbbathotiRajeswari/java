@@ -1,0 +1,15 @@
+package p1;
+class A
+{
+private int data=50;
+private void msg()
+{
+System.out.println("This is private method of same package with same class:msg()");
+}
+public static void main(String[] args)
+{
+A obj=new A();
+System.out.println("This is private variable of same method with same class:obj.data");
+obj.msg();
+}
+}
