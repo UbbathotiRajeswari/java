@@ -1,0 +1,37 @@
+<html>
+<head>
+<title> Key Events</title>
+</head>
+<body>
+<applet code="KeyTest.class" width=300 height=100>
+</applet>
+</body>
+</html>
+
+
+import java.awt.*;
+import java.awt.event.*;
+import java.applet.*;
+
+public class KeyTest extends Applet implements KeyListener
+{
+public void init()
+{
+Label l=new Label("enter characters");
+add(l);
+TextField tf=new TextField(20);
+tf.addKeyListener(this);
+add(tf);
+}
+public void keyPressed(KeyEvent e){}
+public void keyTyped(KeyEvent e){
+showStatus("Recently Typed Character in the Text Field is:"+e.getKeyChar());
+}
+public void keyReleased(KeyEvent e)
+{
+
+}
+}
+/*<applet code="KeyTest.class" width="300" height="100">
+</applet>*/
+
