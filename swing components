@@ -1,0 +1,84 @@
+//treeexample
+import javax.swing.*;
+import javax.swing.tree.DefaultMutableTreeNode;
+public class TreeExample
+{
+JFrame f;
+TreeExample()
+{
+f=new JFrame();
+DefaultMutableTreeNode style=new DefaultMutableTreeNode("Style");
+DefaultMutableTreeNode color=new DefaultMutableTreeNode("color");
+DefaultMutableTreeNode font=new DefaultMutableTreeNode("font");
+style.add(color);
+style.add(font);
+DefaultMutableTreeNode red=new DefaultMutableTreeNode("red");
+DefaultMutableTreeNode blue=new DefaultMutableTreeNode("blue");
+DefaultMutableTreeNode pink=new DefaultMutableTreeNode("pink");
+DefaultMutableTreeNode green=new DefaultMutableTreeNode("green");
+color.add(red);
+color.add(blue);
+color.add(pink);
+color.add(green);
+JTree jt=new JTree(style);
+f.add(jt);
+f.setSize(200,200);
+f.setVisible(true);
+}
+public static void main(String[] args) {
+new TreeExample();
+}
+}
+
+//table example
+import javax.swing.*;
+public class TableExample
+{
+JFrame f;
+TableExample()
+{
+f=new JFrame();
+String data[][]={{"101","raji","270000"},
+{"120","deepi","250000"},
+{"140","malli","4000000"}};
+String column[]={"ID","NAME","SALARY"};
+JTable jt=new JTable(data,column);
+jt.setBounds(30,40,200,300);
+JScrollPane sp=new JScrollPane(jt);
+f.add(sp);
+f.setSize(300,400);
+f.setVisible(true);
+}
+public static void main(String args[])
+{
+new TableExample();
+}
+}
+
+//panel example
+import java.awt.*;  
+import javax.swing.*;  
+public class PanelExample {  
+     PanelExample()  
+        {  
+        JFrame f= new JFrame("Panel Example");    
+        JPanel panel=new JPanel();  
+        panel.setBounds(80,100,200,200);    
+        panel.setBackground(Color.gray);  
+        JButton b1=new JButton("hello");     
+        b1.setBounds(50,100,80,30);    
+        b1.setBackground(Color.yellow);   
+        JButton b2=new JButton("good morning");   
+        b2.setBounds(100,100,80,30);    
+        b2.setBackground(Color.green);   
+        panel.add(b1); panel.add(b2);  
+        f.add(panel);  
+                f.setSize(400,400);    
+                f.setLayout(null);    
+                f.setVisible(true);    
+        }  
+        public static void main(String args[])  
+        {  
+        new PanelExample();  
+        }  
+    }  
